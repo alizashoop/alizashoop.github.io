@@ -3,7 +3,6 @@ title: "Practical Machine Learning Exercise"
 author: "alizashoop"
 date: "April 3, 2018"
 output:
-  pdf_document: default
   html_document: default
 ---
 
@@ -56,6 +55,7 @@ trainPart<-createDataPartition(y=train$classe,p=.75,list=FALSE)
 trainSet<-train[trainPart,]
 validSet<-train[-trainPart,]
 ```
+Show the classe levels and frequency in the training set.
 ```{r}
 #plot the classe variable
 plot(trainSet$classe,col="pink",main="Classe within Train Set",xlab="Classe",ylab="Frequency")
